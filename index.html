@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- link favicon  -->
+    <link rel="icon" type="image/x-icon" href="assets/weather-app.png">
+
+    <!-- Link Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="container">
+
+            <h1>weather app</h1>
+
+            <div class="tab-container">  
+                <button class="tabs" data-userWeather >   <!---->
+                    your weather
+                </button>
+
+                <button class="tabs" data-searchWeather>
+                    search weather
+                </button>
+            </div>
+
+
+            <div class="weather-container">
+
+                <!-- grant location access  -->
+                <div class="sub-container grant-access-container">
+                    <img src="assets/location.png" loading="lazy" width="80px" height="80px">
+                    <p>Grant Location Access</p>
+                    <p>allow access to get weather information</p>
+                    <button class="grantBtn" data-grantAccess>Grant Access</button>  <!---->
+                </div>
+
+
+                <!-- search-form section -->
+                <form class="search-container" data-search>
+                    <input placeholder="Search for city..." data-searchInput>
+                    <button class="searchBtn" type="submit">   <!---->
+                        <img src="assets/search.png" loading="lazy" width="20px" height="20px">
+                    </button>
+                </form>
+
+
+                <!-- loading screen section  -->
+                <div class="sub-container loading-container">
+                    <img src="assets/loading.gif"  loading="lazy" width="150px" height="150px" >
+                    <p>loading...</p>
+                </div>
+
+                <!-- show weather info  -->
+                <div class="sub-container weather-info-container">
+
+                    <div class="city">
+                        <p data-cityName></p>
+                        <img data-countryFlag>
+                    </div>
+
+                    <p data-weatherDesc></p>
+
+                    <img  data-weatherIcon>
+
+                    <p data-temperature></p>
+
+                    <!-- 3 cards  -->
+                    <div class="parameters-container">
+                        <!-- card1  -->
+                        <div class="parameter">
+                            <img src="assets/wind.png" loading="lazy">
+                            <p>windspeed</p>
+                            <p data-windSpeed></p>
+                        </div>
+
+                        <!-- card2  -->
+                        <div class="parameter">
+                            <img src="assets/humidity.png" loading="lazy">
+                            <p>humidity</p>
+                            <p data-humidity></p>
+                        </div>
+
+                        <!-- card3 -->
+                        <div class="parameter">
+                            <img src="assets/cloud.png" loading="lazy">
+                            <p>Clouds</p>
+                            <p data-cloudiness></p>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Location Not Found -->
+                <div class="errorContainer sub-container">
+                    <img src="assets/not-found.png" data-errorImg />
+                    <p data-errorText></p>
+                    <button class="retryBtn" data-errorButton>Retry Now</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
