@@ -17,6 +17,7 @@
 
 .wrapper{
     height:100vh;
+    min-height: 100vh;
     width: 100vw;
     background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
     color: var(--colorLight2);
